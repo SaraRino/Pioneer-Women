@@ -1,0 +1,602 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Copied from the Internet, it fixes the problems, but not sure what is causing the page to go too wide */
+html, body {
+  overflow-x: hidden;
+}
+/* Antique paper background */
+body {
+  background-image: url(../images/KPertiet_BlendableLayersNo7-base.jpg);
+  background-repeat: no-repeat;
+  width: 100vw;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  font-size: 100%;
+  line-height: 1.5em;
+  color: #41220B;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  background-attachment: fixed;
+}
+h1 {
+  font-size: 2.5em;
+  font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif
+}
+h2 {
+  font-size: 1em;
+  text-align: center;
+}
+h3 {
+  font-size: 1em;
+}
+p {
+  font-size: 12px;
+}
+/* Navigation Bar */
+.bg-img {
+  background-image: url("../images/sdhomestead.jpg");
+  height: 550px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-bottom: 5px solid #41220B;
+  -webkit-box-shadow: 3px 3px 5px #41220B;
+  box-shadow: 3px 3px 5px #41220B;
+}
+/* Position the navbar container inside the image */
+.header-image {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+}
+/* The navbar */
+.topnav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, .2);
+}
+.topnav ul {
+  text-align: center;
+}
+.topnav ul li {
+  list-style: none;
+  display: inline-block;
+}
+/* Navbar links */
+.topnav ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1em;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 25px;
+  transition: all ease 0.5s;
+}
+.topnav a:hover {
+  background-color: rgba(82, 146, 31, 0.71);
+}
+/* Text on image - I don't understand why hero h1, hero h3, and hero button now need negative percentages */
+.hero {
+  margin: 0 auto 0px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 80px;
+  position: relative;
+  padding-bottom: 0px;
+  width: 136%;
+}
+.hero h1 {
+  color: #41220B;
+  font-size: 2.7em;
+  text-shadow: 2px 2px 6px rgba(82, 82, 82, 0.78);
+  letter-spacing: 4.5px;
+  font-weight: 800;
+  font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+  font-style: normal;
+  position: absolute;
+  left: 5%;
+  top: -151%;
+}
+.hero h3 {
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(82, 82, 82, 0.78);
+  letter-spacing: 0.9px;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  left: 5%;
+  top: -105%;
+  font-style: italic;
+  overflow-x: visible;
+  font-size: 1em;
+}
+.hero button {
+  position: absolute;
+  top: -150%;
+  width: 270px;
+  height: 60px;
+  padding-top: 0px;
+  margin-top: 0px;
+  background-color: rgba(146, 162, 124, 0.91);
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+  font-size: 20px;
+  line-height: 14px;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+  box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #41220B;
+  right: 32%;
+  cursor: pointer;
+}
+.hero button:hover {
+  background-color: #99A681;
+}
+.hero button a {
+  color: #41220B;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 14px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* Introduction */
+.intro {
+  border: thick double #41220B;
+  width: 80%;
+  position: relative;
+  margin: -2% 0% 2%;
+  padding: 2%;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 3px #41220B;
+  box-shadow: 2px 2px 3px #41220B;
+  background-color: rgba(82, 114, 55, 0.58);
+  left: 10%;
+  right: 10%;
+}
+.intro-text p {
+  text-align: center;
+  border-radius: 2px;
+  color: #41220B;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  white-space: normal;
+  font-size: 20px;
+  width: 90%;
+  margin-left: 5%;
+}
+/* columns */
+#container {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 0px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+/* Left column */
+.box1, .box2 {
+  padding: 40px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+.box1 h2, .box2 h2 {
+  color: #41220B;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 5%;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.box1 img {
+  padding: 0% 0 0 0px;
+  padding-left: 0px;
+  display: block;
+  margin-left: 0%;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  border: 1px solid #41200B;
+}
+.box1 p, .box2 p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+/* Right column */
+.box2 {
+  /* [disabled]border-top-color: maroon; */
+  /* [disabled]border-top-style: dotted; */
+  /* [disabled]border-top-width: 0px; */
+  border-left: 1px dotted maroon;
+}
+.box2 img {
+  width: 80%;
+  display: block;
+  margin-right: 10%;
+  margin-left: 10%;
+  height: 84%;
+}
+/* footer */
+footer {
+  background-color: darkgreen;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+footer a {
+  color: white;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+footer a:hover {
+  color: rgba(101, 225, 97, 0.89);
+  text-decoration: none;
+}
+footer h1 {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+footer p {
+  font-size: small;
+}
+/* Small Screen 360px */
+@media (min-width: 360px) {
+  /* Antique paper background */
+  body {
+    background-image: url(../images/KPertiet_BlendableLayersNo7-base.jpg);
+    width: 100vw;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 100%;
+    line-height: 1.5em;
+    color: #41220B;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    background-attachment: fixed;
+  }
+  /* Navigation Bar */
+  .bg-img {
+    height: 350px;
+    background-position: center center;
+  }
+  /* Navbar links */
+  .topnav ul li a {
+    display: block;
+    font-size: 0.8em;
+    padding: 15px;
+    transition: all ease 0.5s;
+  }
+  .topnav a:hover {
+    padding: 15px;
+    background-color: rgba(82, 146, 31, 0.71);
+  }
+  .hero h1 {
+    font-size: 1.6em;
+    letter-spacing: 5.8px;
+    /* [disabled]position: absolute; */
+    left: 10%;
+    top: -169%;
+    right: 10%;
+    width: 80%;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .hero h3 {
+    text-shadow: 2px 2px 6px rgba(82, 82, 82, 0.78);
+    letter-spacing: 0.3px;
+    position: absolute;
+    left: 10%;
+    top: -140%;
+    overflow-x: visible;
+    font-size: 0.75em;
+    right: 10%;
+    width: 80%;
+  }
+  .hero button {
+    /* [disabled]position: absolute; */
+    top: -100%;
+    background-color: rgba(146, 162, 124, 0.91);
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: 0.5em;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+    box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+    border-radius: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #41220B;
+    cursor: pointer;
+    width: 70%;
+    text-decoration: none;
+    height: 40px;
+    left: 15%;
+    right: 0%;
+    max-width: 190px;
+    margin-left: 5px;
+  }
+  .hero button a {
+    font-weight: 600;
+    font-size: 1.7em;
+    text-align: center;
+  }
+  /* Introduction */
+  .intro {
+    width: 80%;
+    position: relative;
+    margin-top: -10%;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: 2%;
+    left: 10%;
+    right: 10%;
+  }
+  .intro-text p {
+    font-size: 0.9em;
+  }
+  .box1 h2, .box2 h2 {
+    padding-left: 0px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 1em;
+  }
+  .box1 p, .box2 p {
+    text-align: justify;
+    font-size: 0.8em;
+    line-height: 1.3em;
+  }
+  /* Right column */
+  .box2 {
+    padding: 42px;
+    text-align: justify;
+    color: #41220B;
+    border-top: 1px dotted maroon;
+  }
+  /* footer */
+  footer {
+    height: 100px;
+    margin-top: 20px;
+  }
+  footer a {
+    font-size: 0.8em;
+  }
+  footer p {
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: -20px;
+  }
+}
+@media (min-width:810px) {
+  .hero h1 {
+    font-size: 2.5em;
+    letter-spacing: 4.5px;
+    position: absolute;
+    left: 7%;
+    top: -125%;
+    width: 85%;
+    right: 7%;
+  }
+  .hero h3 {
+    text-shadow: 2px 2px 6px rgba(82, 82, 82, 0.78);
+    letter-spacing: 1.1px;
+    position: absolute;
+    left: 7%;
+    top: -90%;
+    overflow-x: visible;
+    font-size: 0.9em;
+    padding-left: 3px;
+  }
+  .hero button {
+    position: absolute;
+    top: -130%;
+    width: 200px;
+    height: 48px;
+    padding-top: 0px;
+    margin-top: 0px;
+    background-color: rgba(146, 162, 124, 0.91);
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: 0.7em;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+    box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #41220B;
+    cursor: pointer;
+    right: 0%;
+    left: 45%;
+    margin-left: 35px;
+    margin-right: 10px;
+    padding-left: 0px;
+  }
+  .hero button a {
+    font-size: 1.3em;
+  }
+  /* Introduction */
+  .intro {
+    border: thick double #41220B;
+    width: 80%;
+    position: relative;
+    margin-top: -5%;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    -webkit-box-shadow: 2px 2px 3px #41220B;
+    box-shadow: 2px 2px 3px #41220B;
+    background-color: rgba(144, 158, 118, 1.00);
+    left: 10%;
+    right: 10%;
+    height: 7em;
+  }
+  .intro-text p {
+    font-size: 1.1em;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  /* Right column */
+  .box2 {}
+  .box1 h2, .box2 h2 {
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 1.1em;
+  }
+  .box1 p, .box2 p {
+    text-align: justify;
+    font-size: 0.9em;
+  }
+  /* footer */
+  footer {
+    background-color: darkgreen;
+    color: white;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-top: -15px;
+  }
+}
+@media (min-width:1080px) {
+  .hero button {
+    position: absolute;
+    top: -133%;
+    width: 370px;
+    height: 53px;
+    padding-top: 0px;
+    margin-top: 0px;
+    background-color: rgba(146, 162, 124, 0.91);
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: 20px;
+    line-height: 14px;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+    box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #41220B;
+    cursor: pointer;
+    left: 49%;
+    margin-bottom: 0%;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero button a {
+    color: #41220B;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    left: auto;
+    padding-right: 0px;
+  }
+  /* Introduction */
+  .intro {
+    border: thick double #41220B;
+    width: 80%;
+    position: relative;
+    margin-top: -2%;
+    margin-right: 0%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    background-color: rgba(147, 159, 119, 1.00);
+    left: 11%;
+    right: 10%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: 100px;
+  }
+  .intro-text p {
+    text-align: center;
+    border-radius: 2px;
+    color: #41220B;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    white-space: normal;
+    font-size: 1.2em;
+    margin-left: 5%;
+    width: 90%;
+    padding-left: 0px;
+  }
+  /* Right column */
+  .box2 {
+    border-left: 1px dotted maroon;
+  }
+}
+@media (min-width:1200px) {
+  .hero button {
+    position: absolute;
+    top: -133%;
+    width: 370px;
+    height: 53px;
+    padding-top: 0px;
+    margin-top: 0px;
+    background-color: rgba(146, 162, 124, 0.91);
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: 20px;
+    line-height: 14px;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+    box-shadow: 2px 2px 6px rgba(41, 22, 0, 0.78);
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #41220B;
+    cursor: pointer;
+    left: 52%;
+    margin-bottom: 0%;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* Introduction */
+  .intro {
+    border: thick double #41220B;
+    width: 80%;
+    position: relative;
+    margin-top: -2%;
+    margin-right: 0%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    background-color: rgba(147, 159, 119, 1.00);
+    left: 11%;
+    right: 10%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    height: 85px;
+  }
+}
